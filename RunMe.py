@@ -17,7 +17,7 @@ import ast
 dir_path = os.path.dirname(os.path.realpath(__file__))
 os.chdir(dir_path)
 
-prefix = ['!', '.']
+prefix = ['$', '!']
 bot = commands.Bot(command_prefix=prefix, description=description, pm_help=None)
 
 bot.actions = []  # changes messages in mod-/server-logs
