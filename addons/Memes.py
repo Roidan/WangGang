@@ -273,6 +273,12 @@ class Memes:
     async def concern(self, ctx):
         """MEMES?"""
         await self._meme(ctx, "https://i.imgur.com/cWXBb5g.png")
+
+    @commands.command(pass_context=True, hidden=False)
+    @commands.cooldown(rate=1, per=5.0, type=commands.BucketType.channel)
+    async def bloodtype(self, ctx):
+        """What is your blood type?"""
+        await self._meme(ctx, "What is your blood type?")
         
 # Load the extension
 def setup(bot):
