@@ -82,7 +82,8 @@ addons = [
     'addons.utility',
     'addons.load',
     'addons.events',
-    'addons.mod'
+    'addons.mod',
+    'addons.memes'
 ]
 
 failed_addons = []
