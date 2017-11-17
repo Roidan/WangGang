@@ -98,4 +98,4 @@ for extension in addons:
 
 # Execute
 print('Bot directory: ', dir_path)
-bot.run(open("token").read())
+bot.run(open("token").read().rstrip())
