@@ -67,7 +67,8 @@ async def on_ready():
                  
         bot.rules_channel = discord.utils.get(server.channels, name="rules")
         bot.log_channel = discord.utils.get(server.channels, name="mod-log")
-        
+
+        bot.nomemes_role = discord.utils.get(server.roles, name="No-Memes")
         bot.muted_role = discord.utils.get(server.roles, name="Muted")
             
         print("Initialized on {}.".format(server.name))
