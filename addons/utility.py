@@ -22,7 +22,8 @@ class Utility:
     async def restart(self):
         """Restarts the bot."""
         await self.bot.say("Restarting...")
-        os.execv(sys.executable, ['python3.6'] + sys.argv)
+        # supervisord will restart the bot automatically
+        sys.exit(1)
         
 def setup(bot):
     bot.add_cog(Utility(bot))
