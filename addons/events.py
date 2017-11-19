@@ -12,7 +12,7 @@ class Events:
         print('Addon "{}" loaded'.format(self.__class__.__name__))
 
     async def on_message(self, message):
-        #auto update
+        # auto update
         if message.author.name == "GitHub" and message.author.discriminator == "0000":
             print("Pulling changes!")
             git.pull()
