@@ -80,6 +80,12 @@ async def on_ready():
 
 
 # https://github.com/ihaveamac/Kurisu/blob/master/run.py
+@bot.event
+async def on_command_error(error, ctx):
+    if isinstance(error, commands.errors.CommandOnCooldown):
+        await bot.send_message(ctx.message.channel, "This command is on cooldown. Try again in {:.2f}s.".format(error.retry_after))
+    else:
+        await bot.send_message(ctx.message.channel, "An error occured while processing the `{}` command.".format(ctx.command.name))
 
 # loads extensions
 addons = [
